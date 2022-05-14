@@ -1,5 +1,6 @@
 const REQUESTS_PER_FIVE_SECONDS = 25;
 const slowDown = require('express-slow-down');
+const { getRequestBuilder } = require('./requestbuilder');
 const app = express();
 const port = 6969;
 
@@ -12,10 +13,8 @@ const speedLimiter = slowDown({
 app.use(speedLimiter);
 
 app.get('/:urlOfRequest', (req, res) => {
-    // FETCH here
-    // get URL from req.params.urlOfRequest
-    // Build call from req.body, req.headers
-    // RES => build same way.
+    res = await getRequestBuilder(req);
+    
 });
 
 app.post('/:urlOfRequest', (req, res) => {
