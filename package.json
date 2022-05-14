@@ -1,0 +1,15 @@
+{
+  "name": "a-frayed-rate-limiter",
+  "version": "1.0.0",
+  "description": "A rate limiter for really, really, really slow APIs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-slow-down": "^1.4.0"
+  }
+}
